@@ -1,10 +1,8 @@
 {
-  "name": "passwordless-app",
+  "name": "react-sample",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@aws-amplify/auth": "^6.3.11",
-    "@aws-sdk/client-secrets-manager": "^3.635.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -12,15 +10,11 @@
     "@types/node": "^16.18.104",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "amazon-cognito-passwordless-auth": "^0.14.0",
-    "aws-amplify": "^6.4.3",
-    "aws-lambda": "^1.0.7",
-    "aws-sdk": "^2.1670.0",
-    "crypto-secure-random-digit": "^1.0.10",
+    "aws-amplify": "^6.4.4",
+    "dotenv": "^16.4.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
-    "ts-node": "^10.9.2",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -28,8 +22,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "secret": "ts-node melco_secret_manager_get_data.ts"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

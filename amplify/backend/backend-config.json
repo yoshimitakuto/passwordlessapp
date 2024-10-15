@@ -1,1 +1,125 @@
-{}
+{
+  "auth": {
+    "yoshimipasswordlessfc531270fc531270": {
+      "customAuth": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "yoshimipasswordlessfc531270fc531270CreateAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "yoshimipasswordlessfc531270fc531270DefineAuthChallenge",
+          "triggerProvider": "Cognito"
+        },
+        {
+          "attributes": [
+            "Arn",
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "yoshimipasswordlessfc531270fc531270VerifyAuthChallengeResponse",
+          "triggerProvider": "Cognito"
+        }
+      ],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": [],
+          "passwordPolicyMinLength": 8
+        },
+        "signupAttributes": [
+          "PHONE_NUMBER"
+        ],
+        "socialProviders": [],
+        "usernameAttributes": [
+          "PHONE_NUMBER"
+        ],
+        "verificationMechanisms": [
+          "PHONE_NUMBER"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    }
+  },
+  "function": {
+    "yoshimipasswordlessfc531270fc531270CreateAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "yoshimipasswordlessfc531270fc531270DefineAuthChallenge": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "yoshimipasswordlessfc531270fc531270VerifyAuthChallengeResponse": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_yoshimipasswordlessfc531270fc531270CreateAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "yoshimipasswordlessfc531270fc531270CreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_yoshimipasswordlessfc531270fc531270CreateAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "yoshimipasswordlessfc531270fc531270CreateAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_yoshimipasswordlessfc531270fc531270DefineAuthChallenge_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "yoshimipasswordlessfc531270fc531270DefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_yoshimipasswordlessfc531270fc531270DefineAuthChallenge_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "yoshimipasswordlessfc531270fc531270DefineAuthChallenge"
+        }
+      ]
+    },
+    "AMPLIFY_function_yoshimipasswordlessfc531270fc531270VerifyAuthChallengeResponse_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "yoshimipasswordlessfc531270fc531270VerifyAuthChallengeResponse"
+        }
+      ]
+    },
+    "AMPLIFY_function_yoshimipasswordlessfc531270fc531270VerifyAuthChallengeResponse_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "yoshimipasswordlessfc531270fc531270VerifyAuthChallengeResponse"
+        }
+      ]
+    }
+  }
+}
